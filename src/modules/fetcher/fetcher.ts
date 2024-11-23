@@ -10,11 +10,11 @@ const getParams = ( params: string[][] | Record<string, string> | string | URLSe
 }
 
 const fetcher = async ({ url, init, params }:fetcherProps) => {
-  const baseUrl = process.env.EXPO_PUBLIC_API_URL
+  const baseUrl = process.env.REACT_APP_API_URL
   const paramsUrl = getParams(params)
   const urlRequest = `${baseUrl}/${url}${paramsUrl}`
   const options = {
-    Headers: { "x_cg_demo_api_key" : process.env.EXPO_PUBLIC_API_TOKEN },
+    Headers: { "x_cg_demo_api_key" : process.env.REACT_APP_API_TOKEN },
     ...init
   }
   try{

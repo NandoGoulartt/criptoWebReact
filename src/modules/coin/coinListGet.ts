@@ -1,14 +1,12 @@
 import { fetcher } from "../fetcher/fetcher";
 
-const coinListGet = async () => {
+export const coinListGet = async () => {
   const response = await fetcher({
     url: "coins/markets",
     params: {
-      vs_currency: "BRL",
-      pais: "brasil",
-      estado: "SC",
+      vs_currency: "USD",
     },
   });
-
-  return response
+ return response
+ 
 }
